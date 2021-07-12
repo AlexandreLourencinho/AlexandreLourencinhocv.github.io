@@ -76,72 +76,72 @@ neon4.onclick = function () {
         carouselDepop();
     }
 };
-// récupération du lien ouvrant le formulaire et ajout de la fonction, lors du click sur le lien, qui permet la transition
-// animée via l'injection des classes correspodantes : l'accordéon et le carousel se "réduisent" pendant que le formulaire,
-// lui, apparaît en grandissant.
-const lienForm = document.getElementById('contact');
-lienForm.onclick = function () {
-    let vuForm = document.getElementById('formulaire').className;
-    let cartouche = document.getElementById('carouche').className;
-    let accord = document.getElementById('accordion').className;
-    console.log(vuForm);
-    console.log(cartouche);
-    console.log(accord);
-    if (vuForm == "d-none formulaire" && cartouche == "d-flex justify-content-center carouche mx-auto" && accord == "vide" || cartouche == "d-flex testanimationn justify-content-center mx-auto" && vuForm == "d-none formulaire" && accord == "vide") {
-        carouselDepop();
-        document.getElementById('accordion').className = 'testanimation';
-        document.getElementById('formulaire').className = "d-flex align-items-center flex-column form-group testanimationn";
-    }
-};
-const lienForm2 = document.getElementById('contact2');
-lienForm2.onclick = function () {
-    let vuForm = document.getElementById('formulaire').className;
-    let cartouche = document.getElementById('carouche').className;
-    let accord = document.getElementById('accordion').className;
-    console.log(vuForm);
-    console.log(cartouche);
-    console.log(accord);
-    if (vuForm == "d-none formulaire" && cartouche == "d-flex justify-content-center carouche mx-auto" && accord == "vide" || cartouche == "d-flex testanimationn justify-content-center mx-auto" && vuForm == "d-none formulaire" && accord == "vide") {
-        carouselDepop();
-        document.getElementById('accordion').className = 'testanimation';
-        document.getElementById('formulaire').className = "d-flex align-items-center flex-column form-group testanimationn";
-    }
-};
-// récupération de l'id du bouton permettant le retour du formulaire au carousel + accordéon. détails plus bas
-const retour = document.getElementById('retour');
-retour.onclick = function () {
-    let vuForm = document.getElementById('formulaire').className;
-    let cartouche = document.getElementById('carouche').className;
-    let accord = document.getElementById('accordion').className;
-    console.log(vuForm, "//", cartouche, "//", accord);
-    if (vuForm == "d-flex align-items-center flex-column form-group testanimationn" && cartouche == "d-flex testanimation justify-content-center" && accord == "testanimation") {
-
-        lesErreurs.forEach(function (id) {
-            document.getElementById(id).innerHTML = "";
-        });
-
-        document.getElementById('formulaire').className = "d-flex align-items-center flex-column form-group formdisp";
-        // les setTimeout ici sont utilisés afin de se faire succéder l'animation de réaparition à celle de réapparition, ceci dans le but
-        // d'éviter les "sursauts" a l'écran, provoqué par le passage en display: none. les fonctions lancent les animations après que celle de disparition du formulaire
-        // soit terminée, et a la fin de cette deuxième animation, redonne aux éléments leurs classes de base afin de remplir a nouveau - si besoin est- les conditions
-        // de lancement des autres fonctions, afin qu'elles soient toujours fonctionelles.
-        setTimeout(function () {
-            document.getElementById('formulaire').className = "d-none";
-        }, 501);
-        setTimeout(function () {
-            carouselPop();
-        }, 502);
-        setTimeout(function () {
-            document.getElementById('accordion').className = 'testanimationn';
-        }, 502);
-        setTimeout(function () {
-            document.getElementById('accordion').className = 'vide';
-        }, 1003);
-        setTimeout(function () {
-            document.getElementById('formulaire').className = "d-none formulaire";
-        }, 501);
-    }
-};
+// // récupération du lien ouvrant le formulaire et ajout de la fonction, lors du click sur le lien, qui permet la transition
+// // animée via l'injection des classes correspodantes : l'accordéon et le carousel se "réduisent" pendant que le formulaire,
+// // lui, apparaît en grandissant.
+// const lienForm = document.getElementById('contact');
+// lienForm.onclick = function () {
+//     let vuForm = document.getElementById('formulaire').className;
+//     let cartouche = document.getElementById('carouche').className;
+//     let accord = document.getElementById('accordion').className;
+//     console.log(vuForm);
+//     console.log(cartouche);
+//     console.log(accord);
+//     if (vuForm == "d-none formulaire" && cartouche == "d-flex justify-content-center carouche mx-auto" && accord == "vide" || cartouche == "d-flex testanimationn justify-content-center mx-auto" && vuForm == "d-none formulaire" && accord == "vide") {
+//         carouselDepop();
+//         document.getElementById('accordion').className = 'testanimation';
+//         document.getElementById('formulaire').className = "d-flex align-items-center flex-column form-group testanimationn";
+//     }
+// };
+// const lienForm2 = document.getElementById('contact2');
+// lienForm2.onclick = function () {
+//     let vuForm = document.getElementById('formulaire').className;
+//     let cartouche = document.getElementById('carouche').className;
+//     let accord = document.getElementById('accordion').className;
+//     console.log(vuForm);
+//     console.log(cartouche);
+//     console.log(accord);
+//     if (vuForm == "d-none formulaire" && cartouche == "d-flex justify-content-center carouche mx-auto" && accord == "vide" || cartouche == "d-flex testanimationn justify-content-center mx-auto" && vuForm == "d-none formulaire" && accord == "vide") {
+//         carouselDepop();
+//         document.getElementById('accordion').className = 'testanimation';
+//         document.getElementById('formulaire').className = "d-flex align-items-center flex-column form-group testanimationn";
+//     }
+// };
+// // récupération de l'id du bouton permettant le retour du formulaire au carousel + accordéon. détails plus bas
+// const retour = document.getElementById('retour');
+// retour.onclick = function () {
+//     let vuForm = document.getElementById('formulaire').className;
+//     let cartouche = document.getElementById('carouche').className;
+//     let accord = document.getElementById('accordion').className;
+//     console.log(vuForm, "//", cartouche, "//", accord);
+//     if (vuForm == "d-flex align-items-center flex-column form-group testanimationn" && cartouche == "d-flex testanimation justify-content-center" && accord == "testanimation") {
+//
+//         lesErreurs.forEach(function (id) {
+//             document.getElementById(id).innerHTML = "";
+//         });
+//
+//         document.getElementById('formulaire').className = "d-flex align-items-center flex-column form-group formdisp";
+//         // les setTimeout ici sont utilisés afin de se faire succéder l'animation de réaparition à celle de réapparition, ceci dans le but
+//         // d'éviter les "sursauts" a l'écran, provoqué par le passage en display: none. les fonctions lancent les animations après que celle de disparition du formulaire
+//         // soit terminée, et a la fin de cette deuxième animation, redonne aux éléments leurs classes de base afin de remplir a nouveau - si besoin est- les conditions
+//         // de lancement des autres fonctions, afin qu'elles soient toujours fonctionelles.
+//         setTimeout(function () {
+//             document.getElementById('formulaire').className = "d-none";
+//         }, 501);
+//         setTimeout(function () {
+//             carouselPop();
+//         }, 502);
+//         setTimeout(function () {
+//             document.getElementById('accordion').className = 'testanimationn';
+//         }, 502);
+//         setTimeout(function () {
+//             document.getElementById('accordion').className = 'vide';
+//         }, 1003);
+//         setTimeout(function () {
+//             document.getElementById('formulaire').className = "d-none formulaire";
+//         }, 501);
+//     }
+// };
 
 
 const buton = document.getElementById("swap");
