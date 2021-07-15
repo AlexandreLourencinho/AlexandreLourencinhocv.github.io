@@ -23,6 +23,12 @@
     font-style: normal;
 
 }
+button.accordion-button h2.accordion-header{
+    z-index: -1!important;
+}
+button#swap{
+    z-index: +1!important;
+}
 .vide2{
     display: none!important;
 }
@@ -74,13 +80,13 @@ img.imgcarou{
 .btn.sticky {
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 1em;
+    top: 5em!important;
     right: 0;
 }
 div.sticky{
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 1em;
+    top: 5em;
     right: 0;
 }
 /*police d'écriture, position et luminosité du titre de la page */
