@@ -174,28 +174,28 @@ div.sticky{
     --neon-text-color: #761d00;
     /*--neon-border-color: #08f;*/
 }
-h1 {
-    font-size: 6rem;
-    font-weight: 200;
-    /*font-style: italic;*/
-    color: #fff;
-    padding: 4rem 6rem 5.5rem;
-    /*border: 0.4rem solid #fff;*/
-    /*border-radius: 2rem;*/
-    text-transform: uppercase;
-    animation: flicker 1.5s infinite alternate;
-}
-h1::-moz-selection {
-    /*background-color: var(--neon-border-color);*/
-    color: var(--neon-text-color);
-}
-h1::selection {
-    /*background-color: var(--neon-border-color);*/
-    color: var(--neon-text-color);
-}
-h1:focus {
-    outline: none;
-}
+/*h1 {*/
+/*    font-size: 6rem;*/
+/*    font-weight: 200;*/
+/*    !*font-style: italic;*!*/
+/*    color: #fff;*/
+/*    padding: 4rem 6rem 5.5rem;*/
+/*    !*border: 0.4rem solid #fff;*!*/
+/*    !*border-radius: 2rem;*!*/
+/*    text-transform: uppercase;*/
+/*    animation: flicker 1.5s infinite alternate;*/
+/*}*/
+/*h1::-moz-selection {*/
+/*    !*background-color: var(--neon-border-color);*!*/
+/*    color: var(--neon-text-color);*/
+/*}*/
+/*h1::selection {*/
+/*    !*background-color: var(--neon-border-color);*!*/
+/*    color: var(--neon-text-color);*/
+/*}*/
+/*h1:focus {*/
+/*    outline: none;*/
+/*}*/
 /* Animate neon flicker */
 @keyframes flicker {
 
